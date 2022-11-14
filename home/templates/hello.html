@@ -1,0 +1,70 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock title%}
+
+{%block body%}
+<div class="background-layer"></div>
+{% if request.user.is_authenticated %}
+<div class="container text-center pt-3"><h1>{{request.user.get_username}}'s Videos</h1></div>
+{%else%}
+<div class="alert alert-warning" role="alert">
+    <a href="/home/login">Login</a> for the best experience
+  </div>
+{%endif%}
+<div class="container m-auto mt-2 pt-3">
+{% if request.user.is_authenticated %}
+{% if videos %}
+<a href="/home/editor" class="btn btn-primary m-3">Upload New File</a>
+<div class="d-flex">
+{% for vid in videos %}
+<!-- <div class="card col-6 m-auto"> -->
+  <div class="card m-3 d-flex align-items-start flex-column bd-highlight mb-3" >
+
+      <h5 class="card-header px-4">{{vid.caption}}</h5>
+    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+    <div class="card-body ">
+      <p class="card-text">by {{vid.user}}</p>
+      <a href="/home/editor/{{vid.id}}" class="btn btn-link">Edit Video</a>
+    </div>
+  </div>
+
+{%endfor%}
+</div>
+{%else%}
+
+<div class="container text-center pt-3 mt-4"><h3>No Videos Yet</h3></div>
+<div class="text-center"><img style="width:300px" class="mt-1" src="/static/No data-pana.png" alt=""></div>
+<div class="text-center"><a href="/home/editor" class="btn btn-primary p-2 m-1 text-center">Upload New File</a></div>
+{%endif%}
+{%else%}
+<p>Login to get a list of all your videos</p>
+{%endif%}
+
+
+<!-- <div class="container m-auto mt-2 pt-3">
+    <fieldset name="Video File Upload and Display">
+        {% if msg %} {% autoescape off %} {{ msg }} {% endautoescape %} {% endif %}
+        <div class="card col-6 m-auto">
+            <div class="card-header text-bg-dark">
+              Upload Your Video File
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Edit Your Videos Quickly</h5>
+              <p class="card-text"><form method="post" action="/" enctype="multipart/form-data">
+                {% csrf_token %}
+                <dl>
+                    <p>
+                        <label>Browse and select a video file</label>&nbsp;&nbsp;
+                        <input type="file" name="file" autocomplete="off" required>
+                    </p>
+                </dl>
+                <p>
+                    <input class="btn btn-primary mt-4" type="submit" value="Upload and Edit">
+                </p>
+            </form></p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    </fieldset>
+    </div> --> 
+{%endblock body%}

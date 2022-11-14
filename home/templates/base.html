@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{%block title%}{%endblock title%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    {% load static %}
+     <link rel="stylesheet" href="/static/style.css">
+     <style>  
+     .shape{
+      float: left;
+  shape-outside: inset(20px 10px round 10px);
+     }
+
+     .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #f7f7f7;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      background-color: #292b2c;
+      color: #13bba4;
+      margin-top: -1px;
+    }
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 18px;
+  background: #0275d8;
+  cursor: pointer;
+  border-radius: 0px;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand light" href="/home/main">COTGo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home/main">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/home/about">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/home/editor" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/home/caption">Generate Video Captions</a></li>
+                  <li><a class="dropdown-item" href="/home/editor">Edit Videos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/home/main">See My Videos</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                
+              </li> -->
+            </ul>
+            <a class="btn btn-success mx-3" type="submit" href="/home/login">Login</a> 
+            <a class="btn btn-danger mx-3" type="submit" href="/home/logout">Logout</a> 
+          </div>
+          
+        </div>
+      </nav>
+
+      {%block body%}
+      {%endblock body%}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

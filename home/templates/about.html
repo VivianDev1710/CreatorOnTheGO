@@ -1,0 +1,126 @@
+{%extends 'base.html'%}
+
+{%block title%}About{%endblock title%}
+
+{%block body%}
+<div class="heading">
+    <h1>About COTG</h1>
+</div>
+
+<div class="cont">
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/lightbulb-solid.svg" alt="Card image cap"
+                style="max-height: 10rem;max-width: 5rem;padding-top: 2rem;">
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Simple online video editor</h5>
+            <p class="card-text">Our tool is free-to- use and allows you to upload your videos 
+                to the website and apply some quick edits, 
+                to help you meet your short video creation goals without hassle</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/cloud-arrow-up-solid.svg" alt="Card image cap"
+                style="max-height: 15rem;max-width: 8rem;padding-top: 2rem;">
+                <br>                   
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Cloud Processing</h5>
+            <p class="card-text">All the processing takes place online,
+                 so that you are limited only by your imagination, not your hardware</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/lock-solid.svg" alt="Card image cap"
+                style="max-height: 10rem;max-width: 5rem;padding-top: 2rem;">
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Secure video editing online</h5>
+            <p class="card-text">All you uploaded files, 
+                as well as your created files are saved in our database, 
+                which guarantees the security of your data</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/thumbs-up-solid.svg" alt="Card image cap"
+                style="max-height: 15rem;max-width: 7rem;padding-top: 2rem;">
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Works across various platforms</h5>
+            <p class="card-text">This web-app is browser based. So, it works across 
+                all operating systems, including Windows, Mac and Linux</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/universal-access-solid.svg" alt="Card image cap"
+                style="max-height: 11rem;max-width: 7rem;padding-top: 2rem;">
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Easy to use</h5>
+            <p class="card-text">The tool guides you through the process so you 
+                don’t need experience with advanced video editing to get going right away</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="assets">
+            <img class="card-img-top" src="/static/database-solid.svg" alt="Card image cap"
+                style="max-height: 11rem;max-width: 6rem;padding-top: 2rem;">
+                <br>
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">Data saved online</h5>
+            <p class="card-text">Your progress is saved online so you can work on your 
+                project at different times, and even from different devices.</p>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+
+<style>
+.assets {
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.cont {
+    display: grid;
+    column-gap: 2px;
+    row-gap: 15px;
+    grid-template-columns: 20rem 20rem auto;
+    padding: 10px;
+    margin-left: 17rem;
+}
+.heading{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+</style>
+
+{%endblock body%}

@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block title%}User{%endblock title%}
+
+{%block body%}
+<div class="container">
+    {%if video%}
+    {%for x in video %}
+
+    <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+
+    <!-- <video class="video-fluid">
+
+        <source src="{{x.video.url}}" type="video/mp4"/>
+    </video> -->
+
+    {%endfor%}
+    {%else%}
+    <h2>No videos yet.</h2>
+    {%endif%}
+</div>
+{%endblock body%}
