@@ -1,4 +1,5 @@
 # CreatorOnTheGo
+This web app allows you to upload video files quickly and download a version of them rendered specially for reels. You can crop the video according to your face , add filters and even add text.
 #Steps to run the project:
 
 - fork repository
