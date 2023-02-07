@@ -1,5 +1,5 @@
 # CreatorOnTheGo
-#Steps to run the code:
+#Steps to run the project:
 
 - fork repository
 
