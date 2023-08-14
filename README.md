@@ -15,5 +15,7 @@ This web app allows you to upload video files quickly and download a version of 
  3)  (env) $ django-admin startproject cotgo
  
  - go to browser on url http://127.0.0.1:8000/home/login/
+
+ - full project description and process: https://drive.google.com/file/d/13dAF7fVGaiQi3uOS849BcSM1NyE2Q0hx/view?usp=sharing
   
   
